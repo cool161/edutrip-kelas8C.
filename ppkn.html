@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PPKn - Edutrip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1e1e2f, #2d2d4b);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Aurora background animation */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 30%, #00ffe0aa, transparent 50%),
+                  radial-gradient(circle at 80% 70%, #ff00c8aa, transparent 50%);
+      animation: floatBg 15s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes floatBg {
+      0% {
+        transform: translate(-10%, -10%);
+      }
+      100% {
+        transform: translate(-5%, -5%);
+      }
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      padding: 18px 0;
+      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    nav a:hover {
+      background: linear-gradient(90deg, #00f0ff, #ff00c8);
+      color: black;
+      box-shadow: 0 0 10px #fff, 0 0 20px #00f0ff;
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin: 10px auto 0;
+      background: linear-gradient(90deg, #00f0ff, #ff00c8);
+      border-radius: 2px;
+      animation: pulseLine 2s infinite alternate;
+    }
+
+    @keyframes pulseLine {
+      from {
+        transform: scaleX(0.6);
+        opacity: 0.5;
+      }
+      to {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    .card {
+      width: 85%;
+      max-width: 720px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 24px;
+      margin-top: 20px;
+      box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      position: relative;
+      z-index: 2;
+      animation: slideUp 1.2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(255, 0, 200, 0.4);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+      <a href="ppkn.html">PPKn</a>
+      <a href="bahasainggris.html">Bahasa Inggris</a>
+      <a href="bahasamandarin.html">Mandarin</a>
+      <a href="ips.html">IPS</a>
+    </nav>
+  </header>
+
+  <h1>Pelajaran PPKn</h1>
+
+  <div class="card">
+    <img src="Cuplikan layar 2025-04-04 204833.png" alt="Gambar ilustrasi PPKn">
+  </div>
+
+</body>
+</html>

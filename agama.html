@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPKn - Jelajah Edu</title>
+
+  <!-- Elegant Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 120px;
+      text-align: center;
+      transition: background 0.5s ease-in-out;
+    }
+
+    /* Navigation Bar with Frosted Glass */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 18px 0;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 6px 12px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fffde7;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Title */
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: fadeSlide 1s ease-out;
+    }
+
+    /* Elegant Image Card */
+    .image-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(0, 255, 255, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 600px;
+      width: 90%;
+      margin: 0 auto;
+      animation: fadeSlide 1.2s ease-out;
+    }
+
+    .image-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0, 255, 255, 0.4);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Animations */
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+      <a href="ppkn.html">PPKn</a>
+      <a href="bahasainggris.html">English</a>
+      <a href="bahasamandarin.html">Mandarin</a>
+      <a href="ips.html">IPS</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Eksplorasi PPKn</h1>
+    <div class="image-container">
+      <img src="agamaedutrip.jpg" alt="Ilustrasi PPKn" />
+    </div>
+  </main>
+
+</body>
+</html>
+</html>

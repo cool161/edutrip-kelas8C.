@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPS - Edutrip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff416c);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+      min-height: 100vh;
+      padding-top: 100px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating shapes */
+    .floating-shape {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20%;
+      animation: float 8s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .floating-shape:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .floating-shape:nth-child(2) { top: 70%; left: 80%; animation-delay: 2s; }
+    .floating-shape:nth-child(3) { top: 50%; left: 40%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-40px) rotate(45deg); }
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      backdrop-filter: blur(14px);
+      background: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      padding: 20px 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      padding: 10px 18px;
+      border-radius: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      background: linear-gradient(45deg, #ffb347, #ffcc33);
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 2;
+      color: #fffde7;
+      text-shadow: 0 0 10px #ffc107;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .img-box {
+      width: 300px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+      transform: perspective(1000px);
+    }
+
+    .img-box:hover {
+      transform: scale(1.05) rotateX(4deg) rotateY(-4deg);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .img-box img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Decorations -->
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+  <div class="floating-shape"></div>
+
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+      <a href="ppkn.html">PPKn</a>
+      <a href="bahasainggris.html">Bahasa Inggris</a>
+      <a href="bahasamandarin.html">Mandarin</a>
+      <a href="ips.html">IPS</a>
+    </nav>
+  </header>
+
+  <h1>Pelajaran IPS</h1>
+
+  <div class="gallery">
+    <div class="img-box">
+      <img src="WhatsApp Image 2025-04-04 at 20.23.20.jpeg" alt="Gambar ilustrasi IPS 1">
+    </div>
+    <div class="img-box">
+      <img src="museum.jpg" alt="Gambar ilustrasi IPS 2">
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Indonesia - Edutrip</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #12c2e9;
+            --secondary: #c471ed;
+            --accent: #f64f59;
+            --glass: rgba(255, 255, 255, 0.15);
+            --blur: blur(16px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 100px;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.25);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: #ffffffcc;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background-size: 200% 200%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-position: right center;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            animation: fadeIn 1.5s ease-in-out;
+            background: linear-gradient(to right, #ffffff, #ffeaa7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-spacing: 20px;
+            background: var(--glass);
+            backdrop-filter: var(--blur);
+            -webkit-backdrop-filter: var(--blur);
+            border-radius: 16px;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0 8px 24px rgba(255,255,255,0.2);
+        }
+
+        th {
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        img {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 255, 255, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            margin: 20px 0;
+        }
+
+        img:hover {
+            transform: scale(1.07) rotate(1deg);
+            box-shadow: 0 18px 40px rgba(0, 255, 255, 0.6);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="agama.html">Agama</a>
+            <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+            <a href="ppkn.html">PPKn</a>
+            <a href="bahasainggris.html">Bahasa Inggris</a>
+            <a href="bahasamandarin.html">Mandarin</a>
+            <a href="ips.html">IPS</a>
+        </nav>
+    </header>
+
+    <h1>Pelajaran Bahasa Indonesia</h1>
+
+    <table>
+        <tr>
+            <th>
+                <img src="Cuplikan layar 2025-04-04 205506.png" alt="Gambar ilustrasi Bahasa Indonesia">
+                <img src="Cuplikan layar 2025-04-04 205519.png" alt="Gambar ilustrasi Bahasa Indonesia">
+            </th>
+        </tr>
+    </table>
+
+</body>
+</html>
